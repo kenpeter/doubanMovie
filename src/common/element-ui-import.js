@@ -2,7 +2,18 @@
  * @author monkeywang
  * Date: 17/3/27
  */
+
+// so we import vue here
 import Vue from 'vue'
+
+// element ui, we have
+// button, select,
+// dropdown,
+// dropdown_menu
+// Dropdown_item
+// Input
+// Loading
+// Rating
 import
 {
   Button,
@@ -14,6 +25,8 @@ import
   Loading,
   Rate
 } from 'element-ui'
+
+// variable corresponding....
 let variable = {
   Button,
   Select,
@@ -24,6 +37,7 @@ let variable = {
   Loading,
   Rate
 }
+
 for (let item in variable) {
   if (variable.hasOwnProperty(item)) {
     Vue.use(variable[item])
@@ -31,4 +45,3 @@ for (let item in variable) {
 }
 
 export default Vue
-
