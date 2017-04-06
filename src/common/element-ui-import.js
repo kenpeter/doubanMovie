@@ -6,6 +6,7 @@
 // so we import vue here
 import Vue from 'vue'
 
+// It is an import
 // element ui, we have
 // button, select,
 // dropdown,
@@ -27,6 +28,9 @@ import
 } from 'element-ui'
 
 // variable corresponding....
+// button, select
+// dropdown, d_menu, d_item
+// input, loading, rate
 let variable = {
   Button,
   Select,
@@ -38,10 +42,14 @@ let variable = {
   Rate
 }
 
+// each item in var
 for (let item in variable) {
+  // var has this prop??
   if (variable.hasOwnProperty(item)) {
+    // so vue use it
     Vue.use(variable[item])
   }
 }
 
+// now export vue
 export default Vue

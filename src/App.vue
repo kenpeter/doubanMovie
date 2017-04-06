@@ -1,6 +1,10 @@
+<!-- as usual, template -->
 <template>
+  <!-- app -->
   <div id="app">
+    <!-- dheader, define below, which just header -->
     <Dheader></Dheader>
+
     <transition name="fade">
       <keep-alive exclude="moviesDetail">
         <router-view></router-view>
@@ -17,7 +21,14 @@ export default {
     }
   },
   components: {
+    // component
+    // dheader
+    // it is a func
+    // this func, actual require
+    // what is resolve as param????????
     'Dheader': (resolve) => {
+      // why require an array?????
+      // what is resolve for ....????
       require(['./header'], resolve)
     }
   }

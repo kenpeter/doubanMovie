@@ -3,6 +3,7 @@
 
 // element ui import has Vue, the actual Vue
 import Vue from './common/element-ui-import'
+// app as usual ....
 import App from './App'
 import router from './router'
 import store from './store'

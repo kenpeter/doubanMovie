@@ -1,14 +1,24 @@
+<!-- plate -->
 <template>
+  <!-- header -->
   <div class="douban-header">
+    <!-- container -->
     <div class="douban-header-container">
+      <!-- search -->
       <div class="douban-search">
-        <a class="title">豆瓣电影</a>
+        <!-- under search another container -->
         <div class="search-container">
+          <!-- el input is element input -->
+          <!-- place holder -->
+          <!-- v model, content -->
           <el-input placeholder="电影、影人、影院、电视剧" v-model="content">
+            <!-- element button -->
+            <!-- what is slot append -->
+            <!-- can append search icon -->
+            <!-- onclick, search movie -->
             <el-button slot="append" icon="search" @click="searchMovie"></el-button>
           </el-input>
         </div>
-        <img class="douban-title-img" src="https://img3.doubanio.com/f/movie/9f89b66fd864158832aa65002525bb34fb029a56/pics/movie/events/annual2016/ad_web.png">
       </div>
     </div>
     <div class="douban-bar">
@@ -23,15 +33,19 @@
 
 <script>
   export default{
+    // data, func, with content
     data () {
+      // return obj
       return {
+        // content is empty string
         content: '',
-        title: '正在热映',
+        // title showing ....
+        title: 'Showing',
         barList: [{
-          title: '正在热映',
+          title: 'Showing',
           url: '/'
         }, {
-          title: '即将上映',
+          title: 'Upcoming',
           url: '/upcoming'
         }, {
           title: 'Top250',
@@ -41,9 +55,13 @@
     },
     methods: {
       choiceUrl (title) {
+        // kind of like chaning state
         this.title = title
       },
+      // search movie.......
       searchMovie () {
+        // this, dollar store
+        // commit, SEARCH_TEXT, matching the action method
         this.$store.commit('SEARCH_TEXT', {searchText: this.content})
         this.$store.dispatch('getSearchList')
         this.$store.commit('SEARCH_LOADING', {loading: true})
@@ -101,7 +119,7 @@
           line-height: 75px;
           vertical-align: top;
           width: 500px;
-          margin-left: 50px;
+          margin-left: 0px;
           input{
             height: 34px;
           }
