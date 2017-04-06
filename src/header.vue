@@ -37,7 +37,7 @@
     data () {
       // return obj
       return {
-        // content is empty string
+        // content is the search text
         content: '',
         // title showing ....
         title: 'Showing',
@@ -61,8 +61,13 @@
       // search movie.......
       searchMovie () {
         // this, dollar store
-        // commit, SEARCH_TEXT, matching the action method
+        // when we commit, we commit into store.
+        // SEARCH_TEXT is the function inside mutations.js
+        // searchText: this.content, is like param passing to func.
         this.$store.commit('SEARCH_TEXT', {searchText: this.content})
+
+        // what is store dispatch?
+        // see actions.js
         this.$store.dispatch('getSearchList')
         this.$store.commit('SEARCH_LOADING', {loading: true})
         this.$router.push({path: '/search', query: {searchText: this.content}})

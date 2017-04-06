@@ -57,13 +57,6 @@
           </div>
           <movieComment :title="movieDetail.title"></movieComment>
         </div>
-        <div class="right-side">
-          <div class="ticket">
-            <a class="ticket-btn" href="https://movie.douban.com/subject/25900945/cinema/?from=subject-page">豆瓣购票23元起</a>
-          </div>
-          <div class="game-pic"><img src=" https://img3.doubanio.com/img/files/file-1489162292.jpg " alt=""></div>
-          <div class="qrcode-app"><a href=""></a></div>
-        </div>
       </div>
     </div>
   </div>

@@ -10,6 +10,7 @@ export const mutations = {
   // basically [types.MOVING_TITLE] is a function name
   // state and payload
   // changing part of state.
+  // {title} is shorthand {title: title}
   [types.MOVING_TITLE] (state, {title}) {
     // title sitting inside object
     // get title away.

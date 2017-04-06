@@ -63,8 +63,12 @@ export const actions = {
    * @param commit
    * @param state
    */
+  // when dispatch, we have commit func, commit func, commit func
+  // also, we have state.
   getSearchList ({commit, state}) {
+    // so we log the search text
     console.log(state.searchText)
+    // sdfd
     utils.get('/movie/search', {q: state.searchText}).then(res => {
       commit('SEARCH_LIST', {searchList: res})
       commit('SEARCH_LOADING', {loading: false})
